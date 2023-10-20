@@ -56,9 +56,9 @@ A limit orderbook dex built on Multiversx.
 
 ### Built With
 
-* Golang 
-* React
-* Rust
+* Backend engine - Golang  
+* Frontend Dapp - React 
+* Smart contract - Rust 
 
 
 
