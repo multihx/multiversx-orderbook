@@ -6,7 +6,7 @@ A limit orderbook dex built on multiversx
 ![](./doc/screen.png)
 
 
- Multiversx orderbook  is an ordebook dex built on Multiversx blockchain.
+ Multiversx orderbook is limit ordebook dex built on Multiversx blockchain.
  By operating on a decentralized Multiversx network, the  Multiversx orderbook  promotes decentralization, eliminating the need for a central authorit, no cenerliazd fund custody, no KYC, fully decentralized. The use of blockchain technology ensures transparency, as the order book and trade history can be publicly audited and verified.
 
  
