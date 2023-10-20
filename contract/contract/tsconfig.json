@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit":true,
+    "allowImportingTsExtensions": true,
+    "target": "esnext"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

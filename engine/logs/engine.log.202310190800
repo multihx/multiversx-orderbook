@@ -1,0 +1,164 @@
+[2023-10-19 10:49:03] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 10:49:03] [info] [market.go:39] TEST-USDT started
+[2023-10-19 10:49:03] [info] [main.go:51] start listen :8080
+[2023-10-19 10:49:03] [info] [market.go:39] ETH-USDT started
+[2023-10-19 10:49:05] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 10:52:06] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x1400024aab0), TxHash:"735be93d0b08fb5f0810aba40def16a7367e1d512dee6c29fd384725f738fe5e"}
+[2023-10-19 10:52:06] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x1400024aab0), TxHash:"735be93d0b08fb5f0810aba40def16a7367e1d512dee6c29fd384725f738fe5e"}
+[2023-10-19 10:52:06] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"29\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 10:52:06] [info] [engine.go:97] pushMarketOrder &{29 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 10:52:06] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"c1vpPQsI+18IEKukDe8WpzZ+HVEt7mwp/ThHJfc4/l4="}, Data:(*string)(nil), TxHash:"735be93d0b08fb5f0810aba40def16a7367e1d512dee6c29fd384725f738fe5e"}
+[2023-10-19 10:52:06] [info] [market.go:50] processLimitOrder market: TEST-USDT, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 10:52:06] [debug] [market.go:68] processLimitOrder result...
+[2023-10-19 10:52:06] [debug] [market.go:69]  done: []
+[2023-10-19 10:52:06] [debug] [market.go:70]  partial: <nil>
+[2023-10-19 10:52:06] [debug] [market.go:71]  partialQuantityProcessed: 0
+[2023-10-19 10:56:30] [debug] [api.go:26] %#v&{TEST-USDT}
+[2023-10-19 10:56:30] [info] [api.go:32] OrderBook %v %vredis: nil
+[2023-10-19 11:01:16] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:01:16] [info] [main.go:51] start listen :8080
+[2023-10-19 11:01:16] [info] [market.go:39] ETH-USDT started
+[2023-10-19 11:01:16] [info] [market.go:39] TEST-USDT started
+[2023-10-19 11:01:18] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:01:30] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x14000284d50), TxHash:"96d2e8c4fe311c21b327182011badcbb41e33146b8ae0ae48e75c5794b4aed65"}
+[2023-10-19 11:01:30] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x14000284d50), TxHash:"96d2e8c4fe311c21b327182011badcbb41e33146b8ae0ae48e75c5794b4aed65"}
+[2023-10-19 11:01:30] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"ltLoxP4xHCGzJxggEbrcu0HjMUa4rgrkjnXFeUtK7WU="}, Data:(*string)(nil), TxHash:"96d2e8c4fe311c21b327182011badcbb41e33146b8ae0ae48e75c5794b4aed65"}
+[2023-10-19 11:01:30] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"30\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 11:01:30] [info] [engine.go:97] pushMarketOrder &{30 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 11:01:30] [info] [market.go:50] processLimitOrder market: TEST-USDT, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 11:01:30] [debug] [market.go:68] processLimitOrder result...
+[2023-10-19 11:01:30] [debug] [market.go:69]  done: []
+[2023-10-19 11:01:30] [debug] [market.go:70]  partial: <nil>
+[2023-10-19 11:01:30] [debug] [market.go:71]  partialQuantityProcessed: 0
+[2023-10-19 11:01:30] [debug] [market.go:99] updateOrderbookView: TEST-USDT, orderbook: {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"30","timestamp":"2023-10-19T03:01:30.356602Z","quantity":"1","price":"1000000000000000000"}]}}}}
+[2023-10-19 11:01:48] [debug] [api.go:26] TEST-USDT
+[2023-10-19 11:01:48] [debug] [api.go:32] OrderBook  redis: nil
+[2023-10-19 11:06:22] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:06:22] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:06:22] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:06:22] [info] [main.go:51] start listen :8080
+[2023-10-19 11:06:24] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:06:36] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x1400039c3d0), TxHash:"0a272ece11a0bd9a500c80085aceb258c03d23a4935c7349e5a6de3bd58aefb0"}
+[2023-10-19 11:06:36] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x1400039c3d0), TxHash:"0a272ece11a0bd9a500c80085aceb258c03d23a4935c7349e5a6de3bd58aefb0"}
+[2023-10-19 11:06:36] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"31\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 11:06:36] [info] [engine.go:97] pushMarketOrder &{31 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 11:06:36] [info] [market.go:49] processLimitOrder market: TEST-USDT, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 11:06:36] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"CicuzhGgvZpQDIAIWs6yWMA9I6STXHNJ5abeO9WK77A="}, Data:(*string)(nil), TxHash:"0a272ece11a0bd9a500c80085aceb258c03d23a4935c7349e5a6de3bd58aefb0"}
+[2023-10-19 11:06:36] [debug] [market.go:67] processLimitOrder result...
+[2023-10-19 11:06:36] [debug] [market.go:68]  done: []
+[2023-10-19 11:06:36] [debug] [market.go:69]  partial: <nil>
+[2023-10-19 11:06:36] [debug] [market.go:70]  partialQuantityProcessed: 0
+[2023-10-19 11:06:36] [debug] [market.go:97] updateOrderbookView: TEST-USDT, orderbook: {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"31","timestamp":"2023-10-19T03:06:36.329053Z","quantity":"1","price":"1000000000000000000"}]}}}}
+[2023-10-19 11:06:54] [debug] [api.go:26] TEST-USDT
+[2023-10-19 11:06:54] [debug] [api.go:32] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"31","timestamp":"2023-10-19T03:06:36.329053Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:07:54] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x140001a4590), TxHash:"5a667f59291274401d70f2da7969ac626f5fd4f65fdfba3315fbb02e2a8d54ae"}
+[2023-10-19 11:07:54] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GoY=", ""}, Data:(*string)(0x140001a4590), TxHash:"5a667f59291274401d70f2da7969ac626f5fd4f65fdfba3315fbb02e2a8d54ae"}
+[2023-10-19 11:07:54] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"WmZ/WSkSdEAdcPLaeWmsYm9f1PZf37ozFfuwLiqNVK4="}, Data:(*string)(nil), TxHash:"5a667f59291274401d70f2da7969ac626f5fd4f65fdfba3315fbb02e2a8d54ae"}
+[2023-10-19 11:07:54] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"32\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 11:07:54] [info] [engine.go:97] pushMarketOrder &{32 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 11:07:54] [info] [market.go:49] processLimitOrder market: TEST-USDT, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 11:07:54] [debug] [market.go:67] processLimitOrder result...
+[2023-10-19 11:07:54] [debug] [market.go:68]  done: []
+[2023-10-19 11:07:54] [debug] [market.go:69]  partial: <nil>
+[2023-10-19 11:07:54] [debug] [market.go:70]  partialQuantityProcessed: 0
+[2023-10-19 11:07:54] [debug] [market.go:97] updateOrderbookView: TEST-USDT, orderbook: {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":2,"depth":1,"prices":{"1000000000000000000":{"volume":"2","price":"1000000000000000000","orders":[{"side":"buy","id":"31","timestamp":"2023-10-19T03:06:36.329053Z","quantity":"1","price":"1000000000000000000"},{"side":"buy","id":"32","timestamp":"2023-10-19T03:07:54.867234Z","quantity":"1","price":"1000000000000000000"}]}}}}
+[2023-10-19 11:08:38] [debug] [api.go:26] TEST-USDT
+[2023-10-19 11:08:38] [debug] [api.go:32] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":2,"depth":1,"prices":{"1000000000000000000":{"volume":"2","price":"1000000000000000000","orders":[{"side":"buy","id":"31","timestamp":"2023-10-19T03:06:36.329053Z","quantity":"1","price":"1000000000000000000"},{"side":"buy","id":"32","timestamp":"2023-10-19T03:07:54.867234Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:43:04] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:43:04] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:43:04] [info] [main.go:51] start listen :8080
+[2023-10-19 11:43:04] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:43:07] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:47:18] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "Goc=", ""}, Data:(*string)(0x14000202460), TxHash:"ba3e85cf42da09c2769e019c73016622f7f6d726be31a456f26ddbac84e6b577"}
+[2023-10-19 11:47:18] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "Goc=", ""}, Data:(*string)(0x14000202460), TxHash:"ba3e85cf42da09c2769e019c73016622f7f6d726be31a456f26ddbac84e6b577"}
+[2023-10-19 11:47:18] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"33\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 11:47:18] [info] [engine.go:97] pushMarketOrder &{33 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 11:47:18] [info] [market.go:49] processLimitOrder market: TEST-USDT, order id: 33, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 11:47:18] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"uj6Fz0LaCcJ2ngGccwFmIvf21ya+MaRW8m3brITmtXc="}, Data:(*string)(nil), TxHash:"ba3e85cf42da09c2769e019c73016622f7f6d726be31a456f26ddbac84e6b577"}
+[2023-10-19 11:47:18] [debug] [market.go:67] processLimitOrder result...
+[2023-10-19 11:47:18] [debug] [market.go:68]  done: []
+[2023-10-19 11:47:18] [debug] [market.go:69]  partial: <nil>
+[2023-10-19 11:47:18] [debug] [market.go:70]  partialQuantityProcessed: 0
+[2023-10-19 11:47:18] [debug] [market.go:97] updateOrderbookView: TEST-USDT, orderbook: {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"33","timestamp":"2023-10-19T03:47:18.323709Z","quantity":"1","price":"1000000000000000000"}]}}}}
+[2023-10-19 11:47:28] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:47:28] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"33","timestamp":"2023-10-19T03:47:18.323709Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:47:43] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:47:43] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"33","timestamp":"2023-10-19T03:47:18.323709Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:47:59] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:47:59] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"33","timestamp":"2023-10-19T03:47:18.323709Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:48:45] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:48:45] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"33","timestamp":"2023-10-19T03:47:18.323709Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:49:21] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:49:21] [info] [main.go:51] start listen :8080
+[2023-10-19 11:49:21] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:49:21] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:49:23] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:49:37] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "Goc=", ""}, Data:(*string)(0x140000311c0), TxHash:"20369da8fa640a515199acb0075c73c87e137cd3d6f4e28ab8e262b7829e87cc"}
+[2023-10-19 11:49:37] [debug] [notifier.go:104] handleCreateOrder: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "Goc=", ""}, Data:(*string)(0x140000311c0), TxHash:"20369da8fa640a515199acb0075c73c87e137cd3d6f4e28ab8e262b7829e87cc"}
+[2023-10-19 11:49:37] [debug] [notifier.go:81] contract event: notify.Event{Address:"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x", Identifier:"completedTxEvent", Topics:[]string{"IDadqPpkClFRmaywB1xzyH4TfNPW9OKKuOJit4Keh8w="}, Data:(*string)(nil), TxHash:"20369da8fa640a515199acb0075c73c87e137cd3d6f4e28ab8e262b7829e87cc"}
+[2023-10-19 11:49:37] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"34\",\"Qty\":\"1\",\"Price\":\"1000000000000000000\",\"Side\":0,\"Creator\":\"05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x\"}"}
+[2023-10-19 11:49:37] [info] [engine.go:97] pushMarketOrder &{34 1 1000000000000000000 0 05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7 erd1qqqqqqqqqqqqqpgqtw4utkpr6qgc362ha7cyk2grmzhjl9csymts48786x}
+[2023-10-19 11:49:37] [info] [market.go:49] processLimitOrder market: TEST-USDT, order id: 34, qty: 1, price: 1000000000000000000, side: 0
+[2023-10-19 11:49:37] [debug] [market.go:67] processLimitOrder result...
+[2023-10-19 11:49:37] [debug] [market.go:68]  done: []
+[2023-10-19 11:49:37] [debug] [market.go:69]  partial: <nil>
+[2023-10-19 11:49:37] [debug] [market.go:70]  partialQuantityProcessed: 0
+[2023-10-19 11:49:37] [debug] [market.go:97] updateOrderbookView: TEST-USDT, orderbook: {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}}
+[2023-10-19 11:49:45] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:49:47] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:50:59] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:51:06] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:51:53] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:51:54] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:52:27] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:52:27] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:54:17] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:54:17] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:54:17] [info] [main.go:51] start listen :8080
+[2023-10-19 11:54:17] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:54:19] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:54:21] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:54:21] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:54:35] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:54:35] [info] [main.go:51] start listen :8080
+[2023-10-19 11:54:35] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:54:35] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:54:37] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:54:48] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:54:48] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:56:09] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:56:09] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:56:09] [info] [main.go:51] start listen :8080
+[2023-10-19 11:56:09] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:56:12] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:56:12] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 11:56:44] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 11:56:44] [info] [market.go:38] TEST-USDT started
+[2023-10-19 11:56:44] [info] [market.go:38] ETH-USDT started
+[2023-10-19 11:56:44] [info] [main.go:51] start listen :8080
+[2023-10-19 11:56:46] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 11:56:47] [debug] [api.go:27] TEST-USDT
+[2023-10-19 11:56:47] [debug] [api.go:33] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 12:02:20] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 12:02:20] [info] [main.go:51] start listen :8080
+[2023-10-19 12:02:20] [info] [market.go:38] ETH-USDT started
+[2023-10-19 12:02:20] [info] [market.go:38] TEST-USDT started
+[2023-10-19 12:02:22] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 12:02:23] [debug] [api.go:28] TEST-USDT
+[2023-10-19 12:02:23] [debug] [api.go:34] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 12:02:59] [debug] [api.go:28] TEST-USDT
+[2023-10-19 12:02:59] [debug] [api.go:34] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 12:05:20] [debug] [notifier.go:36] start EventNotifier
+[2023-10-19 12:05:20] [info] [market.go:38] ETH-USDT started
+[2023-10-19 12:05:20] [info] [market.go:38] TEST-USDT started
+[2023-10-19 12:05:20] [info] [main.go:51] start listen :8080
+[2023-10-19 12:05:22] [debug] [notifier.go:44] Successfully connected to RabbitMQ instance
+[2023-10-19 12:05:24] [debug] [api.go:28] TEST-USDT
+[2023-10-19 12:05:24] [debug] [api.go:38] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 12:05:26] [debug] [api.go:28] TEST-USDT
+[2023-10-19 12:05:26] [debug] [api.go:38] OrderBook {"asks":{"numOrders":0,"depth":0,"prices":{}},"bids":{"numOrders":1,"depth":1,"prices":{"1000000000000000000":{"volume":"1","price":"1000000000000000000","orders":[{"side":"buy","id":"34","timestamp":"2023-10-19T03:49:37.091324Z","quantity":"1","price":"1000000000000000000"}]}}}} <nil>
+[2023-10-19 18:02:05] [debug] [notifier.go:38] start EventNotifier
+[2023-10-19 18:02:05] [info] [market.go:38] ETH-USDT started
+[2023-10-19 18:02:05] [info] [main.go:71] start listen :8080
+[2023-10-19 18:02:05] [info] [market.go:38] TEST-USDT started
+[2023-10-19 18:02:07] [debug] [notifier.go:46] Successfully connected to RabbitMQ instance

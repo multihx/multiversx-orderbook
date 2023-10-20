@@ -1,0 +1,53 @@
+{
+    "emittedTransaction": {
+        "nonce": 134,
+        "value": "0",
+        "receiver": "erd1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq6gq4hu",
+        "sender": "erd1qk4e0su5wx72yrmunxa5me0g4mx5xw025x77mzkeljnw9rzhymtshkdxtq",
+        "gasPrice": 1000000000,
+        "gasLimit": 100000000,
+        "data": "QDA1MDBAMDUwMEA1NDQ1NTM1NDJEMzQzODMyMzkzODM0QDU1NTM0NDQzMkQ2MjY1MzU2MjM5NjI=",
+        "chainID": "D",
+        "version": 2,
+        "signature": "720a41ee15439d354c3ffd549322d7b2dae2cada9bc294f1a91f904268c192cc23600a27251be6d6497959b60d0a7b8cb77a97976b0f85530380328048c61a09"
+    },
+    "emittedTransactionData": "@0500@0500@544553542D343832393834@555344432D626535623962",
+    "emittedTransactionHash": "c1730e1094e83b8f9640ad444dd5916b9742bc2ec1e589c17cc886507f908024",
+    "contractAddress": "erd1qqqqqqqqqqqqqpgq2xr937mzx29rajfaddzn82qzsz8chc3lymtsnqehjm",
+    "transactionOnNetwork": {
+        "isCompleted": true,
+        "hash": "c1730e1094e83b8f9640ad444dd5916b9742bc2ec1e589c17cc886507f908024",
+        "type": "normal",
+        "nonce": 134,
+        "round": 8147891,
+        "epoch": 6756,
+        "value": "0",
+        "receiver": "erd1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq6gq4hu",
+        "sender": "erd1qk4e0su5wx72yrmunxa5me0g4mx5xw025x77mzkeljnw9rzhymtshkdxtq",
+        "gasLimit": 100000000,
+        "gasPrice": 1000000000,
+        "data": "@0500@0500@544553542D343832393834@555344432D626535623962",
+        "signature": "",
+        "status": "fail",
+        "timestamp": 1697438946,
+        "blockNonce": 8092948,
+        "hyperblockNonce": 0,
+        "hyperblockHash": "",
+        "smartContractResults": [],
+        "logs": {
+            "address": "erd1qk4e0su5wx72yrmunxa5me0g4mx5xw025x77mzkeljnw9rzhymtshkdxtq",
+            "events": [
+                {
+                    "address": "erd1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq6gq4hu",
+                    "identifier": "signalError",
+                    "topics": [
+                        "05ab97c39471bca20f7c99bb4de5e8aecd4339eaa1bded8ad9fca6e28c5726d7",
+                        "746f6b656e697a65206661696c6564"
+                    ],
+                    "data_payload": "",
+                    "data": ""
+                }
+            ]
+        }
+    }
+}

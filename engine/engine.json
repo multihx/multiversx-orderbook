@@ -1,0 +1,30 @@
+{
+  "redis": "127.0.0.1:6379",
+  "market": [
+    {
+      "market": "BTC-USDT",
+      "exchangeAddress": "erd1qqqqqqqqqqqqqpgqg3kvlulk7jqynhwhenc5ww9qq7tzdh4wymtst8wqaj",
+      "baseSymbol": "BTC",
+      "quoteSymbol": "USDT",
+      "baseESDT": "TEST-482984",
+      "quoteESDT": "USDC-be5b9b"
+    },
+    {
+      "market": "ETH-USDT",
+      "exchangeAddress": "erd1qqqqqqqqqqqqqpgq5e4wry9el60qm8kvv5aqaa04jlf6x44vymtswz5sg4",
+      "baseSymbol": "ETH",
+      "quoteSymbol": "USDT",
+      "baseESDT": "",
+      "quoteESDT": ""
+    }
+  ],
+  "eventNotifier": {
+    "connection": "amqp://user-abd11e1f:0f1b283688229ca953439aafe0d0afdbb284a744e07476e533e5a924aee74730@devnet-rabbitmq.beaconx.app:5672/",
+    "eventId": "events-abd11e1f"
+  },
+  "launcher": {
+    "gateway": "https://devnet-gateway.multiversx.com",
+    "explorer": "https://devnet-explorer.multiversx.com/transactions/",
+    "walletPem": "./wallet-owner.pem"
+  }
+}

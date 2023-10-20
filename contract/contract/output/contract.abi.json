@@ -1,0 +1,367 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.71.0-nightly",
+            "commitHash": "7f94b314cead7059a71a265a8b64905ef2511796",
+            "commitDate": "2023-04-23",
+            "channel": "Nightly",
+            "short": "rustc 1.71.0-nightly (7f94b314c 2023-04-23)"
+        },
+        "contractCrate": {
+            "name": "contract",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.41.3"
+        }
+    },
+    "name": "Pair",
+    "constructor": {
+        "inputs": [
+            {
+                "name": "first_token_id",
+                "type": "TokenIdentifier"
+            },
+            {
+                "name": "second_token_id",
+                "type": "TokenIdentifier"
+            }
+        ],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "createBuyOrder",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [
+                {
+                    "name": "params",
+                    "type": "OrderInputParamsSimple"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "createSellOrder",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [
+                {
+                    "name": "params",
+                    "type": "OrderInputParamsSimple"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "matchOrders",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "order_ids",
+                    "type": "List<u64>"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "matchOrdersExt",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "taker_order_id",
+                    "type": "u64"
+                },
+                {
+                    "name": "maker_order_ids",
+                    "type": "List<u64>"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "cancelOrders",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "order_ids",
+                    "type": "variadic<u64>",
+                    "multi_arg": true
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "cancelAllOrders",
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "freeOrders",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "order_ids",
+                    "type": "variadic<u64>",
+                    "multi_arg": true
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "startGlobalOperation",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "stopGlobalOperation",
+            "onlyOwner": true,
+            "mutability": "mutable",
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "getAddressOrderIds",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "address",
+                    "type": "Address"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "variadic<u64>",
+                    "multi_result": true
+                }
+            ]
+        },
+        {
+            "name": "getOrderIdCounter",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "u64"
+                }
+            ]
+        },
+        {
+            "name": "getOrderById",
+            "mutability": "readonly",
+            "inputs": [
+                {
+                    "name": "id",
+                    "type": "u64"
+                }
+            ],
+            "outputs": [
+                {
+                    "type": "Order"
+                }
+            ]
+        },
+        {
+            "name": "getFirstTokenId",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "TokenIdentifier"
+                }
+            ]
+        },
+        {
+            "name": "getSecondTokenId",
+            "mutability": "readonly",
+            "inputs": [],
+            "outputs": [
+                {
+                    "type": "TokenIdentifier"
+                }
+            ]
+        }
+    ],
+    "events": [
+        {
+            "identifier": "order",
+            "inputs": [
+                {
+                    "name": "caller",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "epoch",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_type",
+                    "type": "OrderType",
+                    "indexed": true
+                },
+                {
+                    "name": "order",
+                    "type": "Order"
+                }
+            ]
+        },
+        {
+            "identifier": "cancel_order",
+            "inputs": [
+                {
+                    "name": "caller",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "epoch",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_type",
+                    "type": "OrderType",
+                    "indexed": true
+                },
+                {
+                    "name": "order_id",
+                    "type": "u64",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "identifier": "match_order",
+            "inputs": [
+                {
+                    "name": "caller",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "epoch",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_type",
+                    "type": "OrderType",
+                    "indexed": true
+                },
+                {
+                    "name": "order_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_creator",
+                    "type": "Address",
+                    "indexed": true
+                }
+            ]
+        },
+        {
+            "identifier": "free_order",
+            "inputs": [
+                {
+                    "name": "caller",
+                    "type": "Address",
+                    "indexed": true
+                },
+                {
+                    "name": "epoch",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_type",
+                    "type": "OrderType",
+                    "indexed": true
+                },
+                {
+                    "name": "order_id",
+                    "type": "u64",
+                    "indexed": true
+                },
+                {
+                    "name": "order_creator",
+                    "type": "Address",
+                    "indexed": true
+                }
+            ]
+        }
+    ],
+    "hasCallback": false,
+    "types": {
+        "Order": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "id",
+                    "type": "u64"
+                },
+                {
+                    "name": "creator",
+                    "type": "Address"
+                },
+                {
+                    "name": "match_provider",
+                    "type": "Address"
+                },
+                {
+                    "name": "input_amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "output_amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "create_epoch",
+                    "type": "u64"
+                },
+                {
+                    "name": "order_type",
+                    "type": "OrderType"
+                }
+            ]
+        },
+        "OrderInputParamsSimple": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "match_provider",
+                    "type": "Address"
+                }
+            ]
+        },
+        "OrderType": {
+            "type": "enum",
+            "variants": [
+                {
+                    "name": "Buy",
+                    "discriminant": 0
+                },
+                {
+                    "name": "Sell",
+                    "discriminant": 1
+                }
+            ]
+        }
+    }
+}

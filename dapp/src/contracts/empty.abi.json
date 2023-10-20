@@ -1,0 +1,106 @@
+{
+    "buildInfo": {
+        "rustc": {
+            "version": "1.71.0-nightly",
+            "commitHash": "7f94b314cead7059a71a265a8b64905ef2511796",
+            "commitDate": "2023-04-23",
+            "channel": "Nightly",
+            "short": "rustc 1.71.0-nightly (7f94b314c 2023-04-23)"
+        },
+        "contractCrate": {
+            "name": "empty",
+            "version": "0.0.0"
+        },
+        "framework": {
+            "name": "multiversx-sc",
+            "version": "0.43.4"
+        }
+    },
+    "docs": [
+        "An empty contract. To be used as a template when starting a new contract from scratch."
+    ],
+    "name": "EmptyContract",
+    "constructor": {
+        "inputs": [],
+        "outputs": []
+    },
+    "endpoints": [
+        {
+            "name": "createPair",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "token_id_pair",
+                    "type": "TokenIdPair"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "createBuyOrder",
+            "mutability": "mutable",
+            "payableInTokens": [
+                "*"
+            ],
+            "inputs": [
+                {
+                    "name": "params",
+                    "type": "OrderInputParams"
+                }
+            ],
+            "outputs": []
+        },
+        {
+            "name": "matchOrders",
+            "mutability": "mutable",
+            "inputs": [
+                {
+                    "name": "order_ids",
+                    "type": "List<u64>"
+                }
+            ],
+            "outputs": []
+        }
+    ],
+    "events": [
+        {
+            "identifier": "new_order",
+            "inputs": [
+                {
+                    "name": "amount",
+                    "type": "BigUint",
+                    "indexed": true
+                }
+            ]
+        }
+    ],
+    "hasCallback": false,
+    "types": {
+        "OrderInputParams": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "amount",
+                    "type": "BigUint"
+                },
+                {
+                    "name": "match_provider",
+                    "type": "Address"
+                }
+            ]
+        },
+        "TokenIdPair": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "first_token_id",
+                    "type": "TokenIdentifier"
+                },
+                {
+                    "name": "second_token_id",
+                    "type": "TokenIdentifier"
+                }
+            ]
+        }
+    }
+}
