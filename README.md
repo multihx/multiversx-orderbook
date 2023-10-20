@@ -1,5 +1,5 @@
 # Multiversx-orderbook 
-A limit orderbook dex built on multiversx
+A limit orderbook dex built on Multiversx.
 
 # Introduction
 
@@ -7,7 +7,8 @@ A limit orderbook dex built on multiversx
 
 
  Multiversx orderbook is a limit ordebook dex built on Multiversx blockchain.
- By operating on a decentralized Multiversx network, the  Multiversx orderbook  promotes decentralization, eliminating the need for a central authorit, no cenerliazd fund custody, no KYC, fully decentralized. The use of blockchain technology ensures transparency, as the order book and trade history can be publicly audited and verified.
+ By operating on a decentralized Multiversx network, the  Multiversx orderbook  promotes decentralization, eliminating the need for a central authorit, no cenerliazd fund custody, no KYC, fully decentralized. 
+ The use of blockchain technology ensures transparency, as the order book and trade history can be publicly audited and verified.
 
  
  # Components
@@ -18,12 +19,12 @@ A limit orderbook dex built on multiversx
         
 - Limit Orderbook Contract
 
-    The on-chain smart contract is responsible for matching and verifying the order submitted by the off-chain engine as well as transfer respective assets between the trading parties.
+    The smart contract is responsible for matching and verifying the order submitted by the off-chain engine as well as transfer respective assets between the trading parties.
 
-    The smart contracts on the blockchain make sure the  secure and transparent transactions.
+    The smart contracts on the blockchain make sure the secure and transparent transactions.
      
 - Matching Engine
-    Key features and functionalities of a decentralized order book engine include:
+    Key features and functionalities of the Multiversx orderbook engine include:
 
     Order Book Management: It maintains an order book that contains buy and sell orders arranged based on price and time priority. The order book records all outstanding orders for a trading pair, including information such as price, quantity, and submission time.
 
