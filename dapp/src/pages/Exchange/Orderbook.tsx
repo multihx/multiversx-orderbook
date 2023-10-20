@@ -24,18 +24,35 @@ const Orderbook = () => {
       index: number
     ): number => (index < depth ? total + size : total);
     let totalSize = bids.reduce(sum, 0) + asks.reduce(sum, 0);
-    // console.log("totalSize ", totalSize);
     let asksToDisplay = getCumulativeOrderbookSide(asks, totalSize, true);
     let bidsToDisplay = getCumulativeOrderbookSide(bids, totalSize, false);
-    // console.log("asksToDisplay ", asksToDisplay);
-    // console.log("bidsToDisplay ", bidsToDisplay);
 
-    let bestSellPrice = asks[0][0];
-    let bestBuyPrice = bids[0][0];
+    let bestSellPrice;
+    let bestBuyPrice;
 
-    setSpread(bestSellPrice - bestBuyPrice);
-    let spreadPercent_ = (bestSellPrice - bestBuyPrice) / bestSellPrice;
-    setSpreadPercent(spreadPercent_ * 100);
+    if (asks[0] && asks[0][0]) {
+      bestSellPrice = asks[0][0];
+    } else {
+      // asks[0][0] is empty or null
+      // Handle the empty case here
+      setSpread(0);
+      setSpreadPercent(0);
+    }
+
+    if (bids[0] && bids[0][0]) {
+      bestBuyPrice = bids[0][0];
+    } else {
+      // bids[0][0] is empty or null
+      // Handle the empty case here
+      setSpread(0);
+      setSpreadPercent(0);
+    }
+
+    if (bestSellPrice && bestBuyPrice) {
+      setSpread(bestSellPrice - bestBuyPrice);
+      let spreadPercent_ = (bestSellPrice - bestBuyPrice) / bestSellPrice;
+      setSpreadPercent(spreadPercent_ * 100);
+    }
 
     setOrderbookData({ bids: bidsToDisplay, asks: asksToDisplay });
     setFetching(false);
