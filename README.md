@@ -1,9 +1,8 @@
 # Multiversx-orderbook 
-An orderbook dex built on multiversx
+A limit orderbook dex built on multiversx
 
 # Introduction
 
-- Main page
 ![](./doc/screen.png)
 
 
