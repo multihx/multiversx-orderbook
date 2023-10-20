@@ -6,9 +6,9 @@ A limit orderbook dex built on Multiversx.
 ![](./doc/screen.png)
 
 
- Multiversx orderbook is a limit ordebook dex built on Multiversx blockchain.
+ Multiversx orderbook is a limit orderbook dex built on Multiversx blockchain.
  By operating on a decentralized Multiversx network, the  Multiversx orderbook  promotes decentralization, eliminating the need for a central authority, no centralized fund custody, no KYC, fully decentralized. 
- The use of blockchain technology ensures transparency, as the order book and trade history can be publicly audited and verified.
+ The use of blockchain technology ensures transparency, as the orderbook and trade history can be publicly audited and verified.
 
  
  # Components
@@ -28,13 +28,13 @@ A limit orderbook dex built on Multiversx.
 
     Key features and functionalities of the Multiversx orderbook engine include:
 
-    Order Book Management: It maintains an order book that contains buy and sell orders arranged based on price and time priority. The order book records all outstanding orders for a trading pair, including information such as price, quantity, and submission time.
+    Orderbook Management: It maintains an orderbook that contains buy and sell orders arranged based on price and time priority. The orderbook records all outstanding orders for a trading pair, including information such as price, quantity, and submission time.
 
-    Matching Engine: The order book engine is responsible for matching buy and sell orders, finding order pairs that match in price and quantity, and executing trades. The matching rules can be configured based on the exchange's requirements, such as choosing price or time priority for matching.
+    Matching Engine: The orderbook engine is responsible for matching buy and sell orders, finding order pairs that match in price and quantity, and executing trades. The matching rules can be configured based on the exchange's requirements, such as choosing price or time priority for matching.
 
-    Trade Execution: Once a matching pair is found, the order book engine submits the trade to on-chain smart for order execution.
+    Trade Execution: Once a matching pair is found, the orderbook engine submits the trade to on-chain smart contract for order execution.
 
-    Real-time Updates: The order book engine continuously updates the order book in real-time as new orders are placed, executed, or canceled. This allows traders to see the latest order book status and make informed trading decisions.
+    Real-time Updates: The orderbook engine continuously updates the orderbook in real-time as new orders are placed, executed, or canceled. This allows traders to see the latest orderbook status and make informed trading decisions.
 
 
 ## Project Setup 
