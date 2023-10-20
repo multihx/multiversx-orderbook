@@ -15,7 +15,7 @@ A limit orderbook dex built on Multiversx.
 - Frontend 
     
     Frontend is the first place user to interact with the DEX. Provides a simple method for 
-    traders to create and submit orders, allowing a trader to request an amount of token they wish to buy or sell, and a price point, and whether they want a limit or market order 
+    traders to create and submit orders, allowing a trader to request an amount of token they wish to buy or sell, and a price point. 
         
 - Limit Orderbook Contract
 
