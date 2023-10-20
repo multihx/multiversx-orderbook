@@ -27,21 +27,11 @@ pub trait Pair:
         self.second_token_id().set_if_empty(&second_token_id);
     }
 
-    // #[payable("*")]
-    // #[endpoint(createBuyOrder)]
-    // fn create_buy_order_endpoint(&self, params: OrderInputParams<Self::Api>) {
-    //     self.require_global_op_not_ongoing();
-    //     self.require_valid_order_input_params(&params);
-    //     let payment = self.require_valid_buy_payment();
-
-    //     self.create_order(payment, params, common::OrderType::Buy);
-    // }
-
     #[payable("*")]
     #[endpoint(createBuyOrder)]
     fn create_buy_order(&self, params: OrderInputParamsSimple<Self::Api>) {
-        // self.require_global_op_not_ongoing();
-        // self.require_valid_order_input_params(&params);
+        self.require_global_op_not_ongoing();
+        self.require_valid_order_input_params(&params);
         let payment = self.require_valid_buy_payment();
 
         self.create_order(payment, params, common::OrderType::Buy);
@@ -50,25 +40,16 @@ pub trait Pair:
     #[payable("*")]
     #[endpoint(createSellOrder)]
     fn create_sell_order_endpoint(&self, params: OrderInputParamsSimple<Self::Api>) {
-        // self.require_global_op_not_ongoing();
-        // self.require_valid_order_input_params(&params);
+        self.require_global_op_not_ongoing();
+        self.require_valid_order_input_params(&params);
         let payment = self.require_valid_sell_payment();
 
         self.create_order(payment, params, common::OrderType::Sell);
     }
 
-    #[endpoint(matchOrders)]
-    fn match_orders_endpoint(&self, order_ids: ManagedVec<u64>) {
-        self.require_global_op_not_ongoing();
-        self.require_valid_match_input_order_ids(&order_ids);
-
-      //  self.match_orders(order_ids);
-    }
-
     #[endpoint(matchOrdersExt)]
     fn match_orders_ext_endpoint(&self, taker_order_id: u64, maker_order_ids: ManagedVec<u64>) {
-        // self.require_global_op_not_ongoing();
-        // self.require_valid_match_input_order_ids(&order_ids);
+        self.require_global_op_not_ongoing();
         self.match_orders_ext(taker_order_id, maker_order_ids);
     }
 
