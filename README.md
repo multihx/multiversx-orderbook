@@ -38,7 +38,7 @@ A limit orderbook dex built on multiversx
 ### Compile and Deploy Contracts 
 - cd contract
 - npm && npm build
-- ./deploy.js
+- ./deploy.sh
 
 ### Dapp
 - cd dapp
@@ -47,7 +47,7 @@ A limit orderbook dex built on multiversx
 
 ### Engine
 - cd engine
-- go mod tidy && bo build 
+- go mod tidy && go build 
 - ./engine
  
 
