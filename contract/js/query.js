@@ -12,7 +12,7 @@ let contractAddress = new Address(ExchangeAddr);
 let abiJson = await promises.readFile("../pair/output/pair.abi.json", { encoding: "utf8" });
 let abiObj = JSON.parse(abiJson);
 let abiRegistry = AbiRegistry.create(abiObj);
-
+clear
 let contract = new SmartContract({
     address: contractAddress,
     abi: abiRegistry

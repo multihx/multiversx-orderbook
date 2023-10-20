@@ -30,11 +30,12 @@ export const useMintTransaction = (type: SessionEnum) => {
     deleteTransactionToast(pingPongSessionId ?? '');
   };
 
-  const sendMintTransaction = async (amount?: string) => {
+  const sendMintTransaction = async (esdtId: string) => {
     clearAllTransactions();
 
+    console.log('sendMintTransaction',esdtId)
     const pingTransaction = smartContract.methods
-      .claim(["TEST-482984","3000000000000000000"])
+      .claim([esdtId, "100000000000000000000"])
       .withGasLimit(60000000)
       .withChainID(getChainId())
       .buildTransaction()

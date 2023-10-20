@@ -13,8 +13,8 @@ const Faucet = () => {
 
   const { sendMintTransaction, mintTokenTransactionStatus } =
     useMintTransaction(SessionEnum.abiPingPongSessionId);
-  const onMint = async () => {
-    await sendMintTransaction();
+  const onMint = async (esdtId: string) => {
+    await sendMintTransaction(esdtId);
   };
 
   const getAssetLogo = (symbol: string) => {
@@ -22,20 +22,29 @@ const Faucet = () => {
   };
 
   const fetchBalance = async () => {
-    let addressBalance: any = [];
+    let faucetBalance: any = [];
     let myBalance: any = [];
-
+    let balance = ESDT_LIST;
+    setBalance(balance);
     axios
       .get(`https://devnet-gateway.multiversx.com/address/${address}/esdt`)
       .then((response) => {
         let esdts = response.data.data.esdts;
         ESDT_LIST.map((token) => {
           let ret = Object.keys(esdts).filter((i: any) => i === token.ESDT);
-          const merged = Object.assign(esdts[ret[0]], token);
-          myBalance.push(merged);
+          console.log(ret);
+          if (ret[0]) {
+            // console.log()
+            const merged = Object.assign(esdts[ret[0]], token);
+            console.log('xxxx', merged);
+            myBalance.push(merged);
+          }
         });
-        console.log(myBalance);
+        // console.log(myBalance);
         // setBalance(myBalance);
+        if (myBalance.length > 0) {
+          // setBalance(myBalance);
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -50,26 +59,31 @@ const Faucet = () => {
         ESDT_LIST.map((token) => {
           let ret = Object.keys(esdts).filter((i: any) => i === token.ESDT);
           const merged = Object.assign(esdts[ret[0]], token);
-          addressBalance.push(merged);
+          faucetBalance.push(merged);
         });
-        // console.log(myBalance);
-        // setBalance(myBalance);
+        console.log('000', faucetBalance);
+
+        faucetBalance.forEach((item: any) => {
+          console.log('2222myBalance', myBalance);
+
+          // let ret = Object(myBalance).keys(esdts).filter((i: any) => i === item.ESDT);
+
+          myBalance.forEach((y: any) => {
+            if (item.ESDT == y.ESDT) {
+              console.log('match');
+              item['my'] = y;
+            }
+          });
+          // console.log('2222', ret);
+        });
+
+        console.log(faucetBalance);
+
+        setBalance(faucetBalance);
       })
       .catch((error) => {
         console.error(error);
       });
-
-
-      
-      myBalance.forEach(element => {
-
-        console.log(element)
-  
-});
-
-      // Object.assign(esdts[ret[0]], token);
-
-  setBalance(myBalance);
   };
 
   useEffect(() => {
@@ -85,7 +99,7 @@ const Faucet = () => {
               <th>
                 <span className='ml-8'>Asset</span>
               </th>
-              {/* <th>Mint Account</th> */}
+              <th>Mint Account</th>
               <th>My balance </th>
             </tr>
           </thead>
@@ -103,13 +117,15 @@ const Faucet = () => {
                       <span className='mx-4'>{item.Symbol}</span>
                     </div>
                   </td>
-                  {/* <td>222</td> */}
                   <td>{format(item.balance / 10 ** 18)}</td>
+                  <td>{item.my ? format(item.my.balance / 10 ** 18) : 0}</td>
                   <td>
                     <div className='flex flex-row  justify-end pr-20 '>
                       <button
                         className='bg-[#21F7DC] px-16 py-2 rounded text-black '
-                        onClick={onMint}
+                        onClick={() => {
+                          onMint(item.ESDT);
+                        }}
                       >
                         Claim
                       </button>

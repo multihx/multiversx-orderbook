@@ -48,10 +48,18 @@ const TradeForm = () => {
         // Handle the successful response
         let esdts = response.data.data.esdts;
         setBaseBalance(
-          format(esdts[getMarketCfg(market).baseESDT].balance / 10 ** 18)
+          format(
+            esdts[getMarketCfg(market).baseESDT]
+              ? esdts[getMarketCfg(market).baseESDT].balance / 10 ** 18
+              : 0
+          )
         );
         setQuoteBalance(
-          format(esdts[getMarketCfg(market).quoteESDT].balance / 10 ** 18)
+          format(
+            esdts[getMarketCfg(market).quoteESDT]
+              ? esdts[getMarketCfg(market).quoteESDT].balance / 10 ** 18
+              : 0
+          )
         );
       })
       .catch((error) => {

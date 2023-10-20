@@ -8,7 +8,7 @@ export const contractAddress = {
     {
       market: 'BTC-USDT',
       exchangeAddress:
-        'erd1qqqqqqqqqqqqqpgqg3kvlulk7jqynhwhenc5ww9qq7tzdh4wymtst8wqaj',
+        'erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl',
       baseSymbol: 'BTC',
       quoteSymbol: 'USDT',
       baseESDT: 'BTC-2e6739',
@@ -18,7 +18,7 @@ export const contractAddress = {
     {
       market: 'ETH-USDT',
       exchangeAddress:
-        'erd1qqqqqqqqqqqqqpgq5e4wry9el60qm8kvv5aqaa04jlf6x44vymtswz5sg4',
+        'erd1qqqqqqqqqqqqqpgqkhlsyzfucyggz65sex93g0l28upd5v06ymts7l47l4',
       baseSymbol: 'ETH',
       quoteSymbol: 'USDT',
       baseESDT: 'ETH-7fd852',
@@ -43,5 +43,5 @@ export const contractAddress = {
       logo: ethereum
     },
   ],
-  faucetAddress: "erd1qqqqqqqqqqqqqpgqpe9kw7yydm6dl9l8g8p3c7y5ye6vmx0cymts6fr2te",
+  faucetAddress: "erd1qqqqqqqqqqqqqpgqn7rh8u0nm7g3eukf090uv0el9qasvex4ymtsj3s847",
 };

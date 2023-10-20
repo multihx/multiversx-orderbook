@@ -237,3 +237,90 @@
 [2023-10-20 14:24:54] [debug] [market.go:72]  partial: <nil>
 [2023-10-20 14:24:54] [debug] [market.go:73]  partialQuantityProcessed: 0
 [2023-10-20 14:24:54] [debug] [market.go:100] updateOrderbookView: BTC-USDT, orderbook: {"asks":{"numOrders":2,"depth":2,"prices":{"10":{"volume":"1","price":"10","orders":[{"side":"sell","id":"39","timestamp":"2023-10-20T06:23:12.538652Z","quantity":"1","price":"10"}]},"12":{"volume":"1","price":"12","orders":[{"side":"sell","id":"40","timestamp":"2023-10-20T06:24:54.552517Z","quantity":"1","price":"12"}]}}},"bids":{"numOrders":0,"depth":0,"prices":{}}}
+[2023-10-20 15:11:22] [debug] [notifier.go:39] start EventNotifier
+[2023-10-20 15:11:22] [info] [market.go:41] ETH-USDT started
+[2023-10-20 15:11:22] [info] [market.go:41] BTC-USDT started
+[2023-10-20 15:11:22] [info] [main.go:71] start listen :8080
+[2023-10-20 15:11:25] [debug] [notifier.go:47] Successfully connected to RabbitMQ instance
+[2023-10-20 16:06:23] [debug] [notifier.go:39] start EventNotifier
+[2023-10-20 16:06:23] [info] [market.go:41] ETH-USDT started
+[2023-10-20 16:06:23] [info] [market.go:41] BTC-USDT started
+[2023-10-20 16:06:23] [info] [main.go:71] start listen :8080
+[2023-10-20 16:06:26] [debug] [notifier.go:47] Successfully connected to RabbitMQ instance
+[2023-10-20 16:16:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createSellOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", "AQ=="}, Data:(*string)(0x1400016fbe0), TxHash:"d7ee129ba1e48ec49e64511e7cb44bc6a4f591bbd6df159e4f54f5cc514c8144"}
+[2023-10-20 16:16:00] [debug] [notifier.go:106] =========> 
+[2023-10-20 16:16:00] [debug] [notifier.go:107]   notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createSellOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", "AQ=="}, Data:(*string)(0x1400016fbe0), TxHash:"d7ee129ba1e48ec49e64511e7cb44bc6a4f591bbd6df159e4f54f5cc514c8144"}
+[2023-10-20 16:16:00] [debug] [notifier.go:110]  id:0, creator:7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982, inputAmount:1000000000000000000, outputAmount:10, side:sell
+[2023-10-20 16:16:00] [info] [engine.go:70] parseRedisMsg {"EventID":1,"Data":"{\"Id\":\"0\",\"Qty\":\"1\",\"Price\":\"10\",\"Side\":1,\"Creator\":\"7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl\",\"TimeStamp\":1697789760,\"Filled\":\"0\"}"}
+[2023-10-20 16:16:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"writeLog", Topics:[]string{"f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "QHRvbyBtdWNoIGdhcyBwcm92aWRlZCBmb3IgcHJvY2Vzc2luZzogZ2FzIHByb3ZpZGVkID0gNTk1MTYwMDAsIGdhcyB1c2VkID0gNDQ3NTIxNA=="}, Data:(*string)(0x1400016fbf0), TxHash:"d7ee129ba1e48ec49e64511e7cb44bc6a4f591bbd6df159e4f54f5cc514c8144"}
+[2023-10-20 16:16:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"completedTxEvent", Topics:[]string{"1+4Sm6HkjsSeZFEefLRLxqT1kbvW3xWeT1T1zFFMgUQ="}, Data:(*string)(nil), TxHash:"d7ee129ba1e48ec49e64511e7cb44bc6a4f591bbd6df159e4f54f5cc514c8144"}
+[2023-10-20 16:16:00] [info] [engine.go:97] pushMarketOrder &{0 1 10 1 7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982 erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl 1697789760 0}
+[2023-10-20 16:16:00] [info] [market.go:52] processLimitOrder market: BTC-USDT, order id: 0, qty: 1, price: 10, side: 1
+[2023-10-20 16:16:00] [debug] [market.go:70] processLimitOrder result...
+[2023-10-20 16:16:00] [debug] [market.go:71]  done: []
+[2023-10-20 16:16:00] [debug] [market.go:72]  partial: <nil>
+[2023-10-20 16:16:00] [debug] [market.go:73]  partialQuantityProcessed: 0
+[2023-10-20 16:16:00] [debug] [market.go:100] updateOrderbookView: BTC-USDT, orderbook: {"asks":{"numOrders":1,"depth":1,"prices":{"10":{"volume":"1","price":"10","orders":[{"side":"sell","id":"0","timestamp":"2023-10-20T08:16:00.582493Z","quantity":"1","price":"10"}]}}},"bids":{"numOrders":0,"depth":0,"prices":{}}}
+[2023-10-20 16:31:06] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createSellOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", "AQ=="}, Data:(*string)(0x1400031c6c0), TxHash:"552d147a17817e5ba3832495999b81caed9f4c459074227cdb1840d0e42e6b03"}
+[2023-10-20 16:31:06] [debug] [notifier.go:106] =========> 
+[2023-10-20 16:31:06] [debug] [notifier.go:107]   notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createSellOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", "AQ=="}, Data:(*string)(0x1400031c6c0), TxHash:"552d147a17817e5ba3832495999b81caed9f4c459074227cdb1840d0e42e6b03"}
+[2023-10-20 16:31:06] [debug] [notifier.go:110]  id:1, creator:7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982, inputAmount:1000000000000000000, outputAmount:20, side:sell
+[2023-10-20 16:31:06] [info] [engine.go:70] parseRedisMsg {"EventID":1,"Data":"{\"Id\":\"1\",\"Qty\":\"1\",\"Price\":\"20\",\"Side\":1,\"Creator\":\"7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl\",\"TimeStamp\":1697790666,\"Filled\":\"0\"}"}
+[2023-10-20 16:31:06] [info] [engine.go:97] pushMarketOrder &{1 1 20 1 7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982 erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl 1697790666 0}
+[2023-10-20 16:31:06] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"writeLog", Topics:[]string{"f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "QHRvbyBtdWNoIGdhcyBwcm92aWRlZCBmb3IgcHJvY2Vzc2luZzogZ2FzIHByb3ZpZGVkID0gNTk1MTYwMDAsIGdhcyB1c2VkID0gNDU0NzM5OA=="}, Data:(*string)(0x1400031c6d0), TxHash:"552d147a17817e5ba3832495999b81caed9f4c459074227cdb1840d0e42e6b03"}
+[2023-10-20 16:31:06] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"completedTxEvent", Topics:[]string{"VS0UeheBflujgySVmZuByu2fTEWQdCJ82xhA0OQuawM="}, Data:(*string)(nil), TxHash:"552d147a17817e5ba3832495999b81caed9f4c459074227cdb1840d0e42e6b03"}
+[2023-10-20 16:31:06] [info] [market.go:52] processLimitOrder market: BTC-USDT, order id: 1, qty: 1, price: 20, side: 1
+[2023-10-20 16:31:06] [debug] [market.go:70] processLimitOrder result...
+[2023-10-20 16:31:06] [debug] [market.go:71]  done: []
+[2023-10-20 16:31:06] [debug] [market.go:72]  partial: <nil>
+[2023-10-20 16:31:06] [debug] [market.go:73]  partialQuantityProcessed: 0
+[2023-10-20 16:31:06] [debug] [market.go:100] updateOrderbookView: BTC-USDT, orderbook: {"asks":{"numOrders":2,"depth":2,"prices":{"10":{"volume":"1","price":"10","orders":[{"side":"sell","id":"0","timestamp":"2023-10-20T08:16:00.582493Z","quantity":"1","price":"10"}]},"20":{"volume":"1","price":"20","orders":[{"side":"sell","id":"1","timestamp":"2023-10-20T08:31:06.526355Z","quantity":"1","price":"20"}]}}},"bids":{"numOrders":0,"depth":0,"prices":{}}}
+[2023-10-20 16:32:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", ""}, Data:(*string)(0x140004025b0), TxHash:"b9bf975001e0bfee72411a8d2b2c037524bd5af2a485bcb66820adf11b79699a"}
+[2023-10-20 16:32:00] [debug] [notifier.go:106] =========> 
+[2023-10-20 16:32:00] [debug] [notifier.go:107]   notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", ""}, Data:(*string)(0x140004025b0), TxHash:"b9bf975001e0bfee72411a8d2b2c037524bd5af2a485bcb66820adf11b79699a"}
+[2023-10-20 16:32:00] [debug] [notifier.go:110]  id:2, creator:7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982, inputAmount:8000000000000000000, outputAmount:1, side:buy
+[2023-10-20 16:32:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"writeLog", Topics:[]string{"f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "QHRvbyBtdWNoIGdhcyBwcm92aWRlZCBmb3IgcHJvY2Vzc2luZzogZ2FzIHByb3ZpZGVkID0gNTk1MTYwMDAsIGdhcyB1c2VkID0gNDYyNjkyMw=="}, Data:(*string)(0x140004025c0), TxHash:"b9bf975001e0bfee72411a8d2b2c037524bd5af2a485bcb66820adf11b79699a"}
+[2023-10-20 16:32:00] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"2\",\"Qty\":\"1\",\"Price\":\"8\",\"Side\":0,\"Creator\":\"7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl\",\"TimeStamp\":1697790720,\"Filled\":\"0\"}"}
+[2023-10-20 16:32:00] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"completedTxEvent", Topics:[]string{"ub+XUAHgv+5yQRqNKywDdSS9WvKkhby2aCCt8Rt5aZo="}, Data:(*string)(nil), TxHash:"b9bf975001e0bfee72411a8d2b2c037524bd5af2a485bcb66820adf11b79699a"}
+[2023-10-20 16:32:00] [info] [engine.go:97] pushMarketOrder &{2 1 8 0 7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982 erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl 1697790720 0}
+[2023-10-20 16:32:00] [info] [market.go:52] processLimitOrder market: BTC-USDT, order id: 2, qty: 1, price: 8, side: 0
+[2023-10-20 16:32:00] [debug] [market.go:70] processLimitOrder result...
+[2023-10-20 16:32:00] [debug] [market.go:71]  done: []
+[2023-10-20 16:32:00] [debug] [market.go:72]  partial: <nil>
+[2023-10-20 16:32:00] [debug] [market.go:73]  partialQuantityProcessed: 0
+[2023-10-20 16:32:00] [debug] [market.go:100] updateOrderbookView: BTC-USDT, orderbook: {"asks":{"numOrders":2,"depth":2,"prices":{"10":{"volume":"1","price":"10","orders":[{"side":"sell","id":"0","timestamp":"2023-10-20T08:16:00.582493Z","quantity":"1","price":"10"}]},"20":{"volume":"1","price":"20","orders":[{"side":"sell","id":"1","timestamp":"2023-10-20T08:31:06.526355Z","quantity":"1","price":"20"}]}}},"bids":{"numOrders":1,"depth":1,"prices":{"8":{"volume":"1","price":"8","orders":[{"side":"buy","id":"2","timestamp":"2023-10-20T08:32:00.314695Z","quantity":"1","price":"8"}]}}}}
+[2023-10-20 16:38:18] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", ""}, Data:(*string)(0x140000b0c70), TxHash:"87b47c5429f9b428d630a07e43f43e04f423c44c13084703397e4b7b40592601"}
+[2023-10-20 16:38:18] [debug] [notifier.go:106] =========> 
+[2023-10-20 16:38:18] [debug] [notifier.go:107]   notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"createBuyOrder", Topics:[]string{"b3JkZXI=", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "GpU=", ""}, Data:(*string)(0x140000b0c70), TxHash:"87b47c5429f9b428d630a07e43f43e04f423c44c13084703397e4b7b40592601"}
+[2023-10-20 16:38:18] [debug] [notifier.go:110]  id:3, creator:7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982, inputAmount:45000000000000000000, outputAmount:3, side:buy
+[2023-10-20 16:38:18] [info] [engine.go:70] parseRedisMsg {"EventID":0,"Data":"{\"Id\":\"3\",\"Qty\":\"3\",\"Price\":\"15\",\"Side\":0,\"Creator\":\"7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982\",\"ContractAddress\":\"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl\",\"TimeStamp\":1697791098,\"Filled\":\"0\"}"}
+[2023-10-20 16:38:18] [info] [engine.go:97] pushMarketOrder &{3 3 15 0 7fe819eb956030ae849c98082e65c9e1b4a1bf5ae786df60cec018d041a86982 erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl 1697791098 0}
+[2023-10-20 16:38:18] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"writeLog", Topics:[]string{"f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI=", "QHRvbyBtdWNoIGdhcyBwcm92aWRlZCBmb3IgcHJvY2Vzc2luZzogZ2FzIHByb3ZpZGVkID0gNTk1MTMwMDAsIGdhcyB1c2VkID0gNDcyMjM0Mg=="}, Data:(*string)(0x140000b0c80), TxHash:"87b47c5429f9b428d630a07e43f43e04f423c44c13084703397e4b7b40592601"}
+[2023-10-20 16:38:18] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"completedTxEvent", Topics:[]string{"h7R8VCn5tCjWMKB+Q/Q+BPQjxEwTCEcDOX5Le0BZJgE="}, Data:(*string)(nil), TxHash:"87b47c5429f9b428d630a07e43f43e04f423c44c13084703397e4b7b40592601"}
+[2023-10-20 16:38:18] [info] [market.go:52] processLimitOrder market: BTC-USDT, order id: 3, qty: 3, price: 15, side: 0
+[2023-10-20 16:38:18] [debug] [market.go:70] processLimitOrder result...
+[2023-10-20 16:38:18] [debug] [market.go:71]  done: [
+"0":
+	side: sell
+	quantity: 1
+	price: 10
+	time: 2023-10-20 08:16:00.582493 +0000 UTC
+]
+[2023-10-20 16:38:18] [debug] [market.go:72]  partial: 
+"3":
+	side: buy
+	quantity: 2
+	price: 15
+	time: 2023-10-20 08:38:18.37913 +0000 UTC
+
+[2023-10-20 16:38:18] [debug] [market.go:73]  partialQuantityProcessed: 1
+[2023-10-20 16:38:18] [info] [launcher.go:154] takerOrderId 3
+[2023-10-20 16:38:18] [info] [launcher.go:155] makerOrderIds [0]
+[2023-10-20 16:38:18] [info] [launcher.go:175] dataField matchOrdersExt@03@0000000000000000
+[2023-10-20 16:38:18] [debug] [market.go:100] updateOrderbookView: BTC-USDT, orderbook: {"asks":{"numOrders":1,"depth":1,"prices":{"20":{"volume":"1","price":"20","orders":[{"side":"sell","id":"1","timestamp":"2023-10-20T08:31:06.526355Z","quantity":"1","price":"20"}]}}},"bids":{"numOrders":2,"depth":2,"prices":{"15":{"volume":"2","price":"15","orders":[{"side":"buy","id":"3","timestamp":"2023-10-20T08:38:18.37913Z","quantity":"2","price":"15"}]},"8":{"volume":"1","price":"8","orders":[{"side":"buy","id":"2","timestamp":"2023-10-20T08:32:00.314695Z","quantity":"1","price":"8"}]}}}}
+[2023-10-20 16:38:24] [info] [launcher.go:150] transactions sent hash: https://devnet-explorer.multiversx.com/transactions/f34956fc361f5e65472f7f675c5a459771d1c26ad24668d693ecfe53de07ccce
+[2023-10-20 16:38:24] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"ESDTTransfer", Topics:[]string{"QlRDLTJlNjczOQ==", "", "Aw==", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI="}, Data:(*string)(nil), TxHash:"f34956fc361f5e65472f7f675c5a459771d1c26ad24668d693ecfe53de07ccce"}
+[2023-10-20 16:38:24] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"matchOrdersExt", Topics:[]string{"bWF0Y2hfb3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GpU=", "", "Aw==", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI="}, Data:(*string)(0x1400031d840), TxHash:"f34956fc361f5e65472f7f675c5a459771d1c26ad24668d693ecfe53de07ccce"}
+[2023-10-20 16:38:24] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"matchOrdersExt", Topics:[]string{"bWF0Y2hfb3JkZXI=", "BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "GpU=", "AQ==", "", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI="}, Data:(*string)(0x1400031d850), TxHash:"f34956fc361f5e65472f7f675c5a459771d1c26ad24668d693ecfe53de07ccce"}
+[2023-10-20 16:38:24] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"writeLog", Topics:[]string{"BauXw5RxvKIPfJm7TeXors1DOeqhve2K2fym4oxXJtc=", "QHRvbyBtdWNoIGdhcyBwcm92aWRlZCBmb3IgcHJvY2Vzc2luZzogZ2FzIHByb3ZpZGVkID0gNTk5ODk5MDAwLCBnYXMgdXNlZCA9IDQwODk2Njk="}, Data:(*string)(0x1400031d860), TxHash:"f34956fc361f5e65472f7f675c5a459771d1c26ad24668d693ecfe53de07ccce"}
+[2023-10-20 16:38:48] [debug] [notifier.go:83] contract event: notifier.Event{Address:"erd1qqqqqqqqqqqqqpgqapfmmkdnaj6wrud9lhjwf6tlhrm7lqkpymtsm4cnhl", Identifier:"ESDTTransfer", Topics:[]string{"QlRDLTJlNjczOQ==", "", "Aw==", "f+gZ65VgMK6EnJgILmXJ4bShv1rnht9gzsAY0EGoaYI="}, Data:(*string)(nil), TxHash:"0b0d60d05b9e8e335d51f25be3b0ca3bff75fe5435cbeb80643b15bf92463466"}
